@@ -1,0 +1,16 @@
+@import "./reset.scss";
+@import "./variables.scss";
+@import "./mixins.scss";
+
+/* Layout */
+@import "./header.scss";
+@import "./footer.scss";
+
+/* Components */
+@import "./card.scss";
+
+/* Pages */
+@import "./home.scss";
+@import "./about.scss";
+@import "./logement.scss";
+@import "./error.scss";

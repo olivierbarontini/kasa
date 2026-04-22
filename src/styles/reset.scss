@@ -1,0 +1,29 @@
+/* Supprime les marges et padding par défaut */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Supprime les styles des listes */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Supprime le soulignement des liens */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*  base pour les images */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* base typo */
+body {
+  font-family: "Montserrat", sans-serif;
+}
