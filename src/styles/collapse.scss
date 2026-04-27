@@ -1,0 +1,49 @@
+.collapse {
+  width: 100%;
+  margin-bottom: 20px;
+
+  &__header {
+    background: #ff6060;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+    h3 {
+      margin: 0;
+      font-size: 18px;
+    }
+  }
+
+  /* Flèche vers le bas par défaut */
+  &__arrow {
+    width: 20px;
+    transform: rotate(90deg); /* ← flèche vers le haut */
+    transition: transform 0.2s ease;
+
+    /* Flèche vers le haut quand ouvert */
+    &--open {
+      transform: rotate(-90deg); /* ← flèche vers le bas */
+    }
+  }
+
+  &__content {
+    background: #f6f6f6;
+    padding: 15px;
+    border-radius: 0 0 5px 5px;
+    font-size: 16px;
+    color: #333;
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 5px;
+    }
+  }
+}

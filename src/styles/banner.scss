@@ -1,3 +1,4 @@
+/* VERSION PAR DÉFAUT (Home) */
 .banner {
   position: relative;
   width: 100%;
@@ -10,7 +11,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(60%); // assombrit l’image
+    filter: brightness(65%);
   }
 
   &__text {
@@ -26,13 +27,27 @@
     z-index: 2;
   }
 
-  // overlay sombre
   &::after {
     content: "";
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.3);
     z-index: 1;
+  }
+}
+
+/* VERSION À PROPOS (pas d’overlay, pas de texte, pas de brightness) */
+.banner--about {
+  img {
+    filter: none !important;
+  }
+
+  &::after {
+    display: none !important;
+  }
+
+  .banner__text {
+    display: none !important;
   }
 }
 

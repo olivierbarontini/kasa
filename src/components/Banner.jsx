@@ -1,6 +1,8 @@
-const Banner = ({ image, text }) => {
+import "../styles/banner.scss";
+
+const Banner = ({ image, text, className }) => {
     return (
-        <div className="banner">
+        <div className={`banner ${className || ''}`}>
             <img src={image} alt="bannière" />
             {text && <p className="banner__text">{text}</p>}
         </div>

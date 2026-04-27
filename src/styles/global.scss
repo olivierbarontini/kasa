@@ -15,3 +15,15 @@
 @import "./about.scss";
 @import "./logement.scss";
 @import "./error.scss";
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #000; // ← noir autour du contenu
+}
+.page-container {
+  max-width: 1240px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px;
+}

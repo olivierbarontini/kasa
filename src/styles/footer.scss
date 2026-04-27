@@ -1,10 +1,20 @@
 .footer {
-  background: black;
+  background: #000000;
+  height: 209px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   color: white;
-  padding: 40px 0;
-  text-align: center;
+  margin-top: 50px; // espace avec le contenu au-dessus
+
+  &__logo {
+    width: 120px;
+    margin-bottom: 20px;
+  }
 
   &__text {
-    font-size: 14px;
+    font-size: 24px;
+    font-weight: 500;
   }
 }
