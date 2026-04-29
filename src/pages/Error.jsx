@@ -5,13 +5,12 @@ function Error() {
   return (
     <div className="page-container">
       <div className="error">
-        <h1>404</h1>
-        <p>Oups ! La page que vous demandez n'existe pas.</p>
-        <Link to="/">Retourner sur la page d’accueil</Link>
+        <h1 className="error_code">404</h1>
+        <p className="error_text">Oups ! La page que vous demandez n'existe pas.</p>
+        <Link to="/" className="error_link">Retourner sur la page d’accueil</Link>
       </div>
     </div>
   );
 }
 
 export default Error;
-
