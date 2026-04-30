@@ -3,14 +3,15 @@ import "../styles/error.scss";
 
 function Error() {
   return (
-    <div className="page-container">
-      <div className="error">
-        <h1 className="error_code">404</h1>
-        <p className="error_text">Oups ! La page que vous demandez n'existe pas.</p>
-        <Link to="/" className="error_link">Retourner sur la page d’accueil</Link>
-      </div>
+    <div className="error">
+      <h1 className="error__code">404</h1>
+      <p className="error__text">Oups ! La page que vous demandez n'existe pas.</p>
+      <Link to="/" className="error__link">
+        Retourner sur la page d’accueil
+      </Link>
     </div>
   );
 }
 
 export default Error;
+

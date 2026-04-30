@@ -1,7 +1,7 @@
 .carousel {
   position: relative;
   width: 100%;
-  height: 415px;
+  height: 415px; // hauteur maquette desktop
   border-radius: 25px;
   overflow: hidden;
 
@@ -9,28 +9,28 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
   }
 
+  /* Flèches de navigation */
   &__arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 40px; // taille correcte pour tes PNG
-    height: 40px;
+    width: 48px;
+    height: 48px;
     cursor: pointer;
-    z-index: 2;
     user-select: none;
+
+    &--left {
+      left: 20px;
+    }
+
+    &--right {
+      right: 20px;
+    }
   }
 
-  &__arrow--left {
-    left: 20px;
-  }
-
-  &__arrow--right {
-    right: 20px;
-  }
-
+  /* Compteur (ex : 2/5) */
   &__counter {
     position: absolute;
     bottom: 20px;
@@ -39,6 +39,31 @@
     color: white;
     font-size: 18px;
     font-weight: 500;
-    z-index: 2;
+  }
+}
+
+/* -------------------------- version mobile ---------------------------- */
+@media (max-width: 768px) {
+  .carousel {
+    height: 255px; // hauteur mobile
+    border-radius: 10px;
+
+    &__arrow {
+      width: 24px;
+      height: 24px;
+
+      &--left {
+        left: 10px;
+      }
+
+      &--right {
+        right: 10px;
+      }
+    }
+
+    &__counter {
+      font-size: 14px;
+      bottom: 10px;
+    }
   }
 }

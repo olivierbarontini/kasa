@@ -3,31 +3,40 @@
   padding: 80px 20px;
   color: #ff6060;
 
-  &_code {
-    font-size: 280px;
+  &__code {
+    font-size: 288px;
     font-weight: 700;
     margin: 0;
-    line-height: 1;
   }
 
-  &_text {
-    font-size: 24px;
-    margin: 20px 0 40px;
+  &__text {
+    font-size: 36px;
+    margin: 20px 0 80px;
   }
 
-  &_link {
+  &__link {
+    color: #000;
     font-size: 18px;
-    color: #ff6060;
     text-decoration: underline;
   }
 }
 
+/* Responsive */
 @media (max-width: 768px) {
-  .error__code {
-    font-size: 120px;
-  }
+  .error {
+    padding: 40px 20px;
 
-  .error__text {
-    font-size: 18px;
+    &__code {
+      font-size: 96px;
+    }
+
+    &__text {
+      font-size: 18px;
+      margin: 20px 0 40px;
+    }
+
+    &__link {
+      font-size: 14px;
+    }
   }
 }

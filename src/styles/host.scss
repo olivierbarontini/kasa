@@ -18,3 +18,22 @@
     object-fit: cover;
   }
 }
+
+/* -------------------------- version mobile ---------------------------- */
+
+@media (max-width: 768px) {
+  .host {
+    gap: 8px;
+
+    &__name {
+      font-size: 14px;
+      width: auto;
+      text-align: right;
+    }
+
+    &__picture {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}

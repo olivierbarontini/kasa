@@ -12,3 +12,17 @@
   font-size: 14px;
   font-weight: 500;
 }
+
+/* -------------------------- version mobile ---------------------------- */
+
+@media (max-width: 768px) {
+  .tags {
+    gap: 8px;
+  }
+
+  .tag {
+    font-size: 12px;
+    padding: 5px 12px;
+    border-radius: 8px;
+  }
+}

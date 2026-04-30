@@ -47,3 +47,37 @@
     }
   }
 }
+
+/* -------------------------- version mobile ---------------------------- */
+
+@media (max-width: 768px) {
+  .collapse {
+    margin-bottom: 15px;
+
+    &__header {
+      padding: 12px;
+      border-radius: 5px;
+
+      h3 {
+        font-size: 16px;
+      }
+    }
+
+    &__arrow {
+      width: 16px;
+    }
+
+    &__content {
+      padding: 12px;
+      font-size: 14px;
+
+      ul {
+        padding-left: 15px;
+      }
+
+      li {
+        margin-bottom: 4px;
+      }
+    }
+  }
+}

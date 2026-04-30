@@ -4,17 +4,23 @@
   margin: 0 auto;
   padding: 20px 0;
 
-  &__banner {
+  .banner {
     width: 100%;
     height: 223px;
     border-radius: 25px;
     overflow: hidden;
     margin-bottom: 40px;
 
+    /* supprime l’overlay si la bannière en a un */
+    &::after {
+      display: none;
+    }
+
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      filter: brightness(100%); // pas d’assombrissement
     }
   }
 
@@ -25,12 +31,12 @@
   }
 }
 
-/* Responsive */
+/* -------------------------- version mobile ---------------------------- */
 @media (max-width: 768px) {
   .about {
     padding: 10px 0;
 
-    &__banner {
+    .banner {
       height: 111px;
       border-radius: 10px;
       margin-bottom: 20px;

@@ -9,6 +9,7 @@ const Header = () => {
             <nav className="header__nav">
                 <NavLink 
                     to="/" 
+                    end
                     className={({ isActive }) => (isActive ? "active" : "")}
                 >
                     Accueil

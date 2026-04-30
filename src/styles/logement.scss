@@ -60,3 +60,55 @@
     }
   }
 }
+
+/* ----------------------  Version mobile --------------------------*/
+@media (max-width: 768px) {
+  .logement {
+    padding: 10px;
+
+    &__header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    &__infos {
+      h1 {
+        font-size: 20px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+
+      .tags {
+        gap: 8px;
+
+        .tag {
+          font-size: 12px;
+          padding: 5px 15px;
+          border-radius: 8px;
+        }
+      }
+    }
+
+    &__host-rating {
+      width: 100%;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0;
+    }
+
+    &__collapses {
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 20px;
+
+      .collapse {
+        width: 100%;
+      }
+    }
+  }
+}
