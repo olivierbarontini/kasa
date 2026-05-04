@@ -1,28 +1,29 @@
+/* --- Bannière À propos (pleine largeur du conteneur global) --- */
+.banner--about {
+  max-width: 1240px;
+  margin: 0 auto;
+  height: 223px;
+  border-radius: 25px;
+  overflow: hidden;
+  margin-bottom: 40px;
+
+  &::after {
+    display: none;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(100%);
+  }
+}
+
+/* --- Conteneur étroit uniquement pour les collapses --- */
 .about {
-  width: 100%;
   max-width: 1023px;
   margin: 0 auto;
   padding: 20px 0;
-
-  .banner {
-    width: 100%;
-    height: 223px;
-    border-radius: 25px;
-    overflow: hidden;
-    margin-bottom: 40px;
-
-    /* supprime l’overlay si la bannière en a un */
-    &::after {
-      display: none;
-    }
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      filter: brightness(100%); // pas d’assombrissement
-    }
-  }
 
   &__collapses {
     display: flex;
@@ -33,14 +34,14 @@
 
 /* -------------------------- version mobile ---------------------------- */
 @media (max-width: 768px) {
+  .banner--about {
+    height: 111px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+
   .about {
     padding: 10px 0;
-
-    .banner {
-      height: 111px;
-      border-radius: 10px;
-      margin-bottom: 20px;
-    }
 
     &__collapses {
       gap: 20px;

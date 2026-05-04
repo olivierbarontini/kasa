@@ -6,11 +6,13 @@ import "./layout.scss";
 export default function Layout() {
   return (
     <div className="layout">
-      <Header />
+      <div className="layout__inner">
+        <Header />
 
-      <main className="layout__content">
-        <Outlet />
-      </main>
+        <main className="layout__content">
+          <Outlet />
+        </main>
+      </div>
 
       <Footer />
     </div>

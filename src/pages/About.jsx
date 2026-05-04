@@ -5,8 +5,10 @@ import "../styles/about.scss";
 
 function About() {
   return (
+    <>
+    <Banner image={bannerImg} className="banner--about" />
     <div className="about">
-      <Banner image={bannerImg} />
+      
 
       <div className="about__collapses">
         <Collapse 
@@ -30,6 +32,7 @@ function About() {
         />
       </div>
     </div>
+    </>
   );
 }
 
