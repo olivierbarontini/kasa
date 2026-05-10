@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "../styles/collapse.scss";
-import arrow from "../assets/icons/arrow_back_ios-24px.png"; // ✔ un seul import
+import arrow from "../assets/icons/arrow_back_ios-24px.png";
 
 function Collapse({ title, content }) {
   const [open, setOpen] = useState(false);
@@ -17,22 +17,19 @@ function Collapse({ title, content }) {
         />
       </div>
 
-      {open && (
-        <div className="collapse__content">
-          {Array.isArray(content) ? (
-            <ul>
-              {content.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
-          ) : (
-            <p>{content}</p>
-          )}
-        </div>
-      )}
+      <div className={open ? "collapse__content collapse__content--open" : "collapse__content"}>
+        {Array.isArray(content) ? (
+          <ul>
+            {content.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+        ) : (
+          <p>{content}</p>
+        )}
+      </div>
     </div>
   );
 }
 
 export default Collapse;
-

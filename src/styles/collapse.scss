@@ -18,24 +18,31 @@
     }
   }
 
-  /* Flèche vers le bas par défaut */
+  /* Flèche */
   &__arrow {
     width: 20px;
-    transform: rotate(90deg); /* ← flèche vers le haut */
+    transform: rotate(90deg);
     transition: transform 0.2s ease;
 
-    /* Flèche vers le haut quand ouvert */
     &--open {
-      transform: rotate(-90deg); /* ← flèche vers le bas */
+      transform: rotate(-90deg);
     }
   }
 
+  /* --- Transition d'ouverture/fermeture --- */
   &__content {
     background: #f6f6f6;
-    padding: 15px;
     border-radius: 0 0 5px 5px;
     font-size: 16px;
     color: #333;
+
+    /* Animation */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+
+    /* On retire le padding quand fermé */
+    padding: 0 15px;
 
     ul {
       margin: 0;
@@ -45,6 +52,11 @@
     li {
       margin-bottom: 5px;
     }
+  }
+
+  &__content--open {
+    max-height: 500px; /* assez grand pour tout contenu */
+    padding: 15px;
   }
 }
 
@@ -56,7 +68,6 @@
 
     &__header {
       padding: 12px;
-      border-radius: 5px;
 
       h3 {
         font-size: 16px;
@@ -68,8 +79,8 @@
     }
 
     &__content {
-      padding: 12px;
       font-size: 14px;
+      padding: 0 12px;
 
       ul {
         padding-left: 15px;
@@ -78,6 +89,10 @@
       li {
         margin-bottom: 4px;
       }
+    }
+
+    &__content--open {
+      padding: 12px;
     }
   }
 }
